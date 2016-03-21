@@ -1,6 +1,38 @@
 <html>
 	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 	<script type="text/javascript">
+		var topic_arr = [];                                                                                                                                   
+		var description_dict={}
+		function addTask(topic) {
+			topic_arr.push(topic);
+		}
+		
+		addTask("studyforenglish");
+		addTask("stuyformath");
+		addTask("studyforphysics");
+		addTask("studyforhistory");
+
+        $(document).ready(function() {
+        	var ul_body = $("<ul>");
+        	ul_body.appendTo('body');
+        	for(var i= 0; i < topic_arr.length;i++) {
+        		    var topic = topic_arr[i]
+        			var li = $("<li>", 
+        	        {
+                        text:  topic
+                    });
+               li.appendTo(ul_body);
+               /*
+               var d = description_dict[topic];
+               var ul = $("<ul>");
+               ul.appendTo(li);
+               	for(var j = 0; j < d.length; j++) {
+        
+        li = $("<li>", 
+     	{
+        text*/
+        	}
+        });
 	</script>
 	<body>
 	</body>
